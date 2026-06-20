@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // قواعد حماية مفتوحة لغرض التطوير - تسمح بالوصول الكامل لكافة المجموعات
+    // تم تعريف المجموعات بشكل صريح لضمان تخطي أخطاء الـ Permission Denied
+    
+    match /colleges/{id} { allow read, write: if true; }
+    match /academicYears/{id} { allow read, write: if true; }
+    match /departments/{id} { allow read, write: if true; }
+    match /students/{id} { allow read, write: if true; }
+    match /subjects/{id} { allow read, write: if true; }
+    match /archives/{id} { allow read, write: if true; }
+
+    // قاعدة عامة وشاملة (Fallback)
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

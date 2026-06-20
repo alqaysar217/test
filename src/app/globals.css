@@ -1,0 +1,63 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary: Deep Luxury Blue (#0B3C5D) -> HSL 205, 79%, 21% */
+    --background: 216 50% 97%;
+    --foreground: 205 79% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 205 79% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 205 79% 10%;
+    --primary: 205 79% 21%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 202 59% 48%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 216 20% 90%;
+    --muted-foreground: 205 20% 40%;
+    --accent: 202 59% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 205 20% 85%;
+    --input: 205 20% 85%;
+    --ring: 205 79% 21%;
+    --radius: 1rem;
+    --sidebar-background: 205 79% 21%;
+    --sidebar-foreground: 216 50% 97%;
+    --sidebar-primary: 202 59% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 202 59% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 205 79% 25%;
+    --sidebar-ring: 202 59% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #0B3C5D 0%, #328CC1 100%);
+}
+
+/* Custom scrollbar for RTL */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-colors;
+}

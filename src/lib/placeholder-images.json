@@ -1,0 +1,22 @@
+{
+  "placeholderImages": [
+    {
+      "id": "app-logo",
+      "description": "Smart Archive App Logo",
+      "imageUrl": "https://picsum.photos/seed/archiva1/200/200",
+      "imageHint": "archive logo"
+    },
+    {
+      "id": "exam-placeholder",
+      "description": "Exam Paper Placeholder",
+      "imageUrl": "https://picsum.photos/seed/exam1/600/800",
+      "imageHint": "exam paper"
+    },
+    {
+      "id": "student-avatar",
+      "description": "Student Avatar",
+      "imageUrl": "https://picsum.photos/seed/student/100/100",
+      "imageHint": "student avatar"
+    }
+  ]
+}
